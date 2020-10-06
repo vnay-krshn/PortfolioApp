@@ -11,6 +11,6 @@ def index(request):
 
 def details(request, project_id):
     project_details = get_object_or_404(Projects, pk = project_id)
-    context_two ={ 'projects': project_details}
-    return render(request, 'projects/details.html', context_two )
+    context = { 'projects': project_details}
+    return render(request, 'projects/details.html', context )
 
